@@ -1,103 +1,149 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className="min-h-screen bg-gray-950">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 relative z-10">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="/tslogo.svg"
+          className="w-[80px] h-auto mx-auto mb-3"
+          alt="Heavy Mug Challenge Badge"
+          width={263}
+          height={78}
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+        <h1 className="text-3xl font-extrabold text-white mb-4 text-center">
+          THE HEAVY MUG CHALLENGE
+        </h1>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <div className="relative overflow-hidden max-w-4xl mx-auto">
+        <div className="pointer-events-none absolute top-0 left-0 w-full h-[100px] bg-gradient-to-b from-gray-950 to-transparent z-10" />
+        <div className="pointer-events-none absolute top-0 left-0 h-full w-[100px] bg-gradient-to-r from-gray-950 to-transparent z-10" />
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          src="/fire.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        <div className="pointer-events-none absolute top-0 right-0 h-full w-[100px] bg-gradient-to-l from-gray-950 to-transparent z-10" />
+        <div className="pointer-events-none absolute bottom-0 left-0 w-full h-[100px] bg-gradient-to-b from-transparent to-gray-950 z-10" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">
+          <div className="text-center">
+            {/* Badge */}
+            <div className="flex justify-center mb-6">
+              <Image
+                className="w-[300px] h-auto md:w-[350px] lg:w-[400px] lg:w-[400px]"
+                src="/boom.png"
+                alt="Heavy Mug Challenge Badge"
+                width={400}
+                height={400}
+              />
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10 space-y-4 text-center">
+        <div className="flex justify-center mb-6">
+          <Link
+            href="/wall-of-fame"
+            className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg transition-all hover:scale-105 border border-gray-600 text-center"
+          >
+            Wall of Fame
+          </Link>
+        </div>
+        <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          🏋️ Lift the worlds heaviest mug without spilling a single drop! Only
+          the strongest and most skilled make it to the Wall of Fame! 💪
+        </p>
+      </div>
+
+      {/* Features Section */}
+      <div className="py-24 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              🚀 How It Works 🚀
+            </h2>
+            <p className="text-xl text-gray-300">
+              The ultimate test of strength and precision!
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-6 bg-gray-800 rounded-lg border border-gray-700 hover:border-yellow-500 transition-all hover:scale-105">
+              <div className="text-5xl mb-4 animate-pulse">🏋️</div>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Lift the Mug
+              </h3>
+              <p className="text-gray-300">
+                Attempt to lift the 10kg heavy mug from the ground!
+              </p>
+            </div>
+            <div className="text-center p-6 bg-gray-800 rounded-lg border border-gray-700 hover:border-yellow-500 transition-all hover:scale-105">
+              <div className="text-5xl mb-4 animate-pulse">💧</div>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Don&apos;t spill a drop
+              </h3>
+              <p className="text-gray-300">
+                Keep the mug steady without spilling any contents!
+              </p>
+            </div>
+            <div className="text-center p-6 bg-gray-800 rounded-lg border border-gray-700 hover:border-yellow-500 transition-all hover:scale-105">
+              <div className="text-5xl mb-4 animate-pulse">🏆</div>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Join the Elite
+              </h3>
+              <p className="text-gray-300">
+                Earn your place on the prestigious Wall of Fame!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="text-center mt-16">
+          <div className="max-w-3xl mx-auto bg-gray-950 rounded-lg py-24 hover:scale-105 transition-all px-4 sm:px-8">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              🚀 Ready to Join the Elite?
+            </h2>
+            <p className="text-white mb-6 text-lg">
+              Take on The Heavy Mug Challenge and earn your place among the
+              legends! 💪
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/rules"
+                className="bg-gray-900 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-lg transition-all hover:scale-105 shadow-lg"
+              >
+                📋 Want to attempt the challenge?
+              </Link>
+              <a
+                href="https://instagram.com/temperedstrength"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:from-pink-600 hover:via-red-600 hover:to-yellow-600 text-white font-bold py-3 px-8 rounded-lg transition-all hover:scale-105 shadow-lg"
+                aria-label="Visit TemperedStrength on Instagram"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  className="w-6 h-6"
+                  aria-hidden="true"
+                >
+                  <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm6 1.25a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                </svg>
+                <span>
+                  🎬 Contact us on{" "}
+                  <span className="font-semibold">Instagram</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
