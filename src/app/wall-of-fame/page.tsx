@@ -7,14 +7,21 @@ type WallOfFameEntry = {
   date: string;
 };
 
-// Mock data for demonstration - in a real app this would come from a database
+const attempts = 6;
+
 const wallOfFameData: WallOfFameEntry[] = [
-  // {
-  //   name: "Mike 'The Iron' Johnson",
-  //   gym: "Powerhouse Gym",
-  //   location: "Los Angeles, CA",
-  //   date: "2024-01-15",
-  // },
+  {
+    name: "Big Sam",
+    gym: "CrossFit Fixus",
+    location: "Greater Manchester, UK",
+    date: "2024-09-07",
+  },
+  {
+    name: "Alan Shaw",
+    gym: "CrossFit Fixus",
+    location: "Greater Manchester, UK",
+    date: "2024-09-07",
+  },
 ];
 
 export default function WallOfFame() {
@@ -51,12 +58,18 @@ export default function WallOfFame() {
           </div>
           <div className="bg-gray-900 rounded-lg p-6 text-center border border-gray-700 hover:border-yellow-500 transition-all hover:scale-105">
             <div className="text-3xl font-bold text-yellow-400 mb-2 flex items-center justify-center">
-              <span className="mr-2">💪</span>0
+              <span className="mr-2">💪</span>
+              {}
+              {attempts}
             </div>
             <div className="text-gray-300">Attempts</div>
           </div>
           <div className="bg-gray-900 rounded-lg p-6 text-center border border-gray-700 hover:border-yellow-500 transition-all hover:scale-105">
-            <div className="text-3xl font-bold text-yellow-400 mb-2">0%</div>
+            <div className="text-3xl font-bold text-yellow-400 mb-2">
+              {attempts > 0
+                ? `${Math.round((wallOfFameData.length / attempts) * 100)}%`
+                : "0%"}
+            </div>
             <div className="text-gray-300">🎯 Success Rate</div>
           </div>
         </div>
@@ -82,7 +95,13 @@ export default function WallOfFame() {
                 <div className="flex justify-between">
                   <span className="text-gray-400">📅 Date:</span>
                   <span className="text-white">
-                    {new Date(champion.date).toLocaleDateString()}
+                    {(() => {
+                      const d = new Date(champion.date);
+                      const day = String(d.getDate()).padStart(2, "0");
+                      const month = String(d.getMonth() + 1).padStart(2, "0");
+                      const year = d.getFullYear();
+                      return `${day}/${month}/${year}`;
+                    })()}
                   </span>
                 </div>
               </div>
