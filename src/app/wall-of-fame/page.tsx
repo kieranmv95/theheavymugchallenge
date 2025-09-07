@@ -31,14 +31,14 @@ const wallOfFameData: WallOfFameEntry[] = [
 ];
 
 const honourableMentions = [
-  {
-    name: "Jamie Townley",
-    description:
-      "Drank the drink but palm contact stole the spot from the wall of fame",
-    gym: "CrossFit Fixus",
-    location: "Greater Manchester, UK",
-    date: "2024-09-07",
-  },
+  // {
+  //   name: "Jamie Townley",
+  //   description:
+  //     "Drank the drink but palm contact stole the spot from the wall of fame",
+  //   gym: "CrossFit Fixus",
+  //   location: "Greater Manchester, UK",
+  //   date: "2024-09-07",
+  // },
 ];
 
 export default function WallOfFame() {
