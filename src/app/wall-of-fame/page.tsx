@@ -7,7 +7,7 @@ type WallOfFameEntry = {
   date: string;
 };
 
-const attempts = 6;
+const attempts = 9;
 
 const wallOfFameData: WallOfFameEntry[] = [
   {
@@ -18,6 +18,23 @@ const wallOfFameData: WallOfFameEntry[] = [
   },
   {
     name: "Alan Shaw",
+    gym: "CrossFit Fixus",
+    location: "Greater Manchester, UK",
+    date: "2024-09-07",
+  },
+  {
+    name: "Kieran Leith",
+    gym: "CrossFit Fixus",
+    location: "Greater Manchester, UK",
+    date: "2024-09-07",
+  },
+];
+
+const honourableMentions = [
+  {
+    name: "Jamie Townley",
+    description:
+      "Drank the drink but palm contact stole the spot from the leaderboard",
     gym: "CrossFit Fixus",
     location: "Greater Manchester, UK",
     date: "2024-09-07",
