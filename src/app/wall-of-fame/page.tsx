@@ -7,7 +7,7 @@ type WallOfFameEntry = {
   date: string;
 };
 
-const attempts = 9;
+const attempts = 12;
 
 const wallOfFameData: WallOfFameEntry[] = [
   {
