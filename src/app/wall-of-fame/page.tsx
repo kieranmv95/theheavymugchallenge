@@ -7,7 +7,7 @@ type WallOfFameEntry = {
   date: string;
 };
 
-const attempts = 12;
+const attempts = 14;
 
 const wallOfFameData: WallOfFameEntry[] = [
   {
@@ -28,17 +28,6 @@ const wallOfFameData: WallOfFameEntry[] = [
     location: "Greater Manchester, UK",
     date: "2024-09-07",
   },
-];
-
-const honourableMentions = [
-  // {
-  //   name: "Jamie Townley",
-  //   description:
-  //     "Drank the drink but palm contact stole the spot from the wall of fame",
-  //   gym: "CrossFit Fixus",
-  //   location: "Greater Manchester, UK",
-  //   date: "2024-09-07",
-  // },
 ];
 
 export default function WallOfFame() {
@@ -130,24 +119,6 @@ export default function WallOfFame() {
                   </span>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Honourable Mentions Grid */}
-        <h2 className="text-2xl font-bold text-white mb-4 mt-12">
-          Honourable Mentions
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
-          {honourableMentions.map((mention, index) => (
-            <div
-              key={index.toString()}
-              className="bg-gray-900 rounded-lg p-6 border border-gray-700 shadow-lg"
-            >
-              <div className="text-center mb-4">
-                <h3 className="text-xl font-bold text-white">{mention.name}</h3>
-              </div>
-              <div className="text-white text-sm">{mention.description}</div>
             </div>
           ))}
         </div>
